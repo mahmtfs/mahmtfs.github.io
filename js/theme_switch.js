@@ -1,11 +1,10 @@
-var theme = parseInt(localStorage.getItem("theme"));
-
-if (!theme){
-    theme = 1;
-}
+var theme = 1;
 
 function themeSetter(){
     theme = parseInt(localStorage.getItem("theme"));
+    if (!theme){
+        theme = 1;
+    }
     if (theme){
         document.getElementById("dark_mode_status").innerHTML = "ON";
         document.getElementById("dark_mode").className = "btn border-light rounded-0";
