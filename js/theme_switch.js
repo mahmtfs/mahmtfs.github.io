@@ -2,7 +2,7 @@ var theme = 1;
 
 function themeSetter(){
     theme = parseInt(localStorage.getItem("theme"));
-    if (!theme){
+    if (isNaN(theme)){
         theme = 1;
     }
     if (theme){
