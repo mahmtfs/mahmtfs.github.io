@@ -1,4 +1,4 @@
-var theme = parseInt(localStorage.getItem("theme"));
+var theme = parseInt(sessionStorage.getItem("theme"));
 
 if (!theme){
     theme = 1;
@@ -19,6 +19,6 @@ function themeSetter(){
 
 function themeSwitch() {
     theme = (theme + 1) % 2;
-    localStorage.setItem("theme", theme);
+    sessionStorage.setItem("theme", theme);
     themeSetter();
 }
